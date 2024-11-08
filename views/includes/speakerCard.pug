@@ -1,0 +1,9 @@
+mixin speakerCard(speaker)
+  li.speakers__grid__item
+    button.speakers__grid__item__card(aria-label=`View details of ${speaker.name}, ${speaker.role} at ${speaker.company}` onclick=`speakersManager.handleOpenPopup(${speaker.id})`)
+      .speakers__grid__item__card__image
+        img(src=`${speaker.image}` alt=`${speaker.name}, ${speaker.role} at ${speaker.company}` aria-hidden='true')
+      .speakers__grid__item__card__info
+        h3.speakers__grid__item__card__info__name= speaker.name
+        p.speakers__grid__item__card__info__role= speaker.role
+        p.speakers__grid__item__card__info__company= speaker.company
