@@ -6,12 +6,20 @@ In this project I used ExpressJS to serve my app, Pug Template Engine for the HT
 
 ## 2. Development requirements
 
-* Replicate the web element exactly according to the design layout. 
-* Make the layout adaptive for tablet and mobile devices. Adaptability is at your discretion.
-* Browsers’ support (latest versions): Google Chrome; Firefox; Safari; Edge; Opera.
-* Develop a pop-up/modal window with a description of the speaker. 
-  * By clicking on the photo of the speaker, the modal window should appear with a description of the specific speaker. Use any mock data (lorem ipsum).
-  * The modal window should close by pressing the 'X' element or the `Esc` key.
+- Replicate the web element exactly according to the design layout.
+- Make the layout adaptive for tablet and mobile devices. Adaptability is at your discretion.
+- Browsers’ support (latest versions): Google Chrome; Firefox; Safari; Edge; Opera.
+- Develop a pop-up/modal window with a description of the speaker.
+  - By clicking on the photo of the speaker, the modal window should appear with a description of the specific speaker. Use any mock data (lorem ipsum).
+  - The modal window should close by pressing the 'X' element or the `Esc` key.
+
+## 3. How to run the app?
+
+1. Clone the repository to your local machine.
+2. Run 'npm install'
+3. Run 'npm run dev'
+4. If you want to change some styles you can run 'npm run scss' to start the sass watcher
 
 ## Note
-* I've tried to do the best I can, even though I have no knowledge of Express or Pug!
+
+- I've tried to do the best I can, even though I have no knowledge of Express or Pug!
