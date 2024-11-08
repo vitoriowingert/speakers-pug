@@ -164,29 +164,27 @@ body.overflow-blocked {
     grid-template-columns: 1fr;
   }
 }
-.speakers__grid__item {
-  width: 285px;
-  height: 433px;
-}
-.speakers__grid__item__card {
+.speakers__grid__card {
   display: grid;
   justify-items: center;
   gap: 2rem;
   text-align: center;
+  width: 285px;
+  height: 433px;
 }
-.speakers__grid__item__card__image {
+.speakers__grid__card__image {
   width: 100%;
   height: 285px;
   aspect-ratio: 1/1;
   position: relative;
   clip-path: polygon(0 0, 81.5% 0, 100% 18.5%, 100% 100%, 18.5% 100%, 0 82.5%);
 }
-.speakers__grid__item__card__image img {
+.speakers__grid__card__image img {
   width: 271px;
   height: 271px;
   object-fit: cover;
 }
-.speakers__grid__item__card__image:after {
+.speakers__grid__card__image:after {
   content: "";
   position: absolute;
   display: block;
@@ -196,20 +194,20 @@ body.overflow-blocked {
   height: 100%;
   box-shadow: inset -15px -14px #00d15f;
 }
-.speakers__grid__item__card__info {
+.speakers__grid__card__info {
   display: grid;
   gap: 16px;
 }
-.speakers__grid__item__card__info__name {
+.speakers__grid__card__info__name {
   font-size: 28px;
   line-height: 36px;
   font-weight: bold;
 }
-.speakers__grid__item__card__info__role, .speakers__grid__item__card__info__company {
+.speakers__grid__card__info__role, .speakers__grid__card__info__company {
   font-size: 20px;
   line-height: 24px;
 }
-.speakers__grid__item__details {
+.speakers__details {
   display: none;
   position: fixed;
   z-index: 50;
@@ -221,10 +219,10 @@ body.overflow-blocked {
   justify-items: center;
   border-radius: 16px;
 }
-.speakers__grid__item__details.active {
+.speakers__details.active {
   display: grid;
 }
-.speakers__grid__item__details__overlay {
+.speakers__details__overlay {
   position: absolute;
   z-index: 60;
   top: 0;
@@ -234,7 +232,7 @@ body.overflow-blocked {
   background-color: #232323;
   opacity: 0.6;
 }
-.speakers__grid__item__details__content {
+.speakers__details__content {
   z-index: 90;
   color: #ffffff;
   box-sizing: border-box;
@@ -248,7 +246,6 @@ body.overflow-blocked {
   left: calc(50% - 405px);
   top: calc(50% - 360px - 38px);
   background: url(Noise-texture.png), #232323;
-  box-shadow: -9px 10.5px 32px rgba(255, 255, 255, 0.29), -8px 10px 4px rgba(0, 0, 0, 0.01), -8px 12px 36px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(50px);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -258,13 +255,13 @@ body.overflow-blocked {
   border-radius: 16px;
 }
 @media (max-width: 1024px) {
-  .speakers__grid__item__details__content {
+  .speakers__details__content {
     width: 768px;
     left: calc(50% - 384px);
   }
 }
 @media (max-width: 768px) {
-  .speakers__grid__item__details__content {
+  .speakers__details__content {
     width: 90vw;
     height: 90vh;
     margin: 0 auto;
@@ -272,7 +269,7 @@ body.overflow-blocked {
     top: unset;
   }
 }
-.speakers__grid__item__details__content__header {
+.speakers__details__content__header {
   width: 100%;
   height: auto;
   max-height: 80px;
@@ -283,46 +280,46 @@ body.overflow-blocked {
   padding: 24px 30px;
 }
 @media (max-width: 768px) {
-  .speakers__grid__item__details__content__header {
+  .speakers__details__content__header {
     padding: 16px;
   }
 }
-.speakers__grid__item__details__content__header__name {
+.speakers__details__content__header__name {
   font-size: 36px;
   line-height: 44px;
   font-weight: bold;
 }
 @media (max-width: 768px) {
-  .speakers__grid__item__details__content__header__name {
+  .speakers__details__content__header__name {
     font-size: 20px;
     line-height: 24px;
   }
 }
-.speakers__grid__item__details__content__header__close {
+.speakers__details__content__header__close {
   padding: 12px;
 }
 @media (max-width: 768px) {
-  .speakers__grid__item__details__content__header__close {
+  .speakers__details__content__header__close {
     padding: 8px;
   }
 }
-.speakers__grid__item__details__content__header__close svg {
+.speakers__details__content__header__close svg {
   width: 24px;
   height: 24px;
 }
 @media (max-width: 768px) {
-  .speakers__grid__item__details__content__header__close svg {
+  .speakers__details__content__header__close svg {
     width: 16px;
     height: 16px;
   }
 }
-.speakers__grid__item__details__content hr {
+.speakers__details__content hr {
   width: 100%;
   height: 4px;
   background-color: #8e71f4;
   border: none;
 }
-.speakers__grid__item__details__content__text {
+.speakers__details__content__text {
   height: 100%;
   font-size: 24px;
   line-height: 28px;
@@ -330,31 +327,32 @@ body.overflow-blocked {
   margin-right: 8px;
 }
 @media (max-width: 768px) {
-  .speakers__grid__item__details__content__text {
+  .speakers__details__content__text {
     font-size: 16px;
     line-height: 20px;
   }
 }
-.speakers__grid__item__details__content__text::-webkit-scrollbar {
+.speakers__details__content__text::-webkit-scrollbar {
   width: 8px;
 }
-.speakers__grid__item__details__content__text::-webkit-scrollbar-track {
+.speakers__details__content__text::-webkit-scrollbar-track {
+  margin-top: 8px;
   background: transparent;
 }
-.speakers__grid__item__details__content__text::-webkit-scrollbar-thumb {
+.speakers__details__content__text::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb, #00d15f);
   border-radius: 4px;
 }
-.speakers__grid__item__details__content__text::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover, #555);
+.speakers__details__content__text::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover, #00612c);
 }
-.speakers__grid__item__details__content__text__inner {
+.speakers__details__content__text__inner {
   padding: 32px 30px;
   overflow-y: auto;
   margin-right: 90px;
 }
 @media (max-width: 768px) {
-  .speakers__grid__item__details__content__text__inner {
+  .speakers__details__content__text__inner {
     margin-right: unset;
     padding: 16px;
   }
