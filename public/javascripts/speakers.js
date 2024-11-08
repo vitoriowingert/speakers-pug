@@ -6,7 +6,7 @@ class SpeakersManager {
 
   async loadSpeakers() {
     try {
-      const response = await fetch("data/speakers.json");
+      const response = await fetch("/data/speakers.json");
       const data = await response.json();
       this.speakers = data.speakers;
       this.renderSpeakers();
