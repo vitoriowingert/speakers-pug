@@ -1,12 +1,8 @@
 extends layout
 
-include includes/speakerCard
-
 block content
   section.speakers
     h2.speakers__title Spotlight Speakers
     img.speakers__icon__down__arrow(src='/icons/down-arrow.svg')
     ol.speakers__grid
-      each speaker in speakers
-        +speakerCard(speaker)
   .popup__container
