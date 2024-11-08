@@ -148,8 +148,9 @@ body {
       position: absolute;
       width: 810px;
       height: 720px;
+      // max-width: 50vw;
+      max-height: 85vh;
       left: calc(50% - 810px / 2);
-      top: calc(50% - 720px / 2 - 38px);
       background: url(Noise-texture.png), #232323;
       backdrop-filter: blur(50px);
       box-sizing: border-box;

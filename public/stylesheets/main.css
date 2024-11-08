@@ -243,8 +243,8 @@ body.overflow-blocked {
   position: absolute;
   width: 810px;
   height: 720px;
+  max-height: 85vh;
   left: calc(50% - 405px);
-  top: calc(50% - 360px - 38px);
   background: url(Noise-texture.png), #232323;
   backdrop-filter: blur(50px);
   box-sizing: border-box;
